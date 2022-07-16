@@ -65,16 +65,48 @@
           </div>
           <b>Roles</b>
           <?php
-              if (count($data['roles']) > 0) {
-                  foreach ($data['roles'] as $roles) {
-                ?>
-              <div class="form-check">
+            if (count($data['roles']) > 0) {
+                foreach ($data['roles'] as $roles) {
+              ?>
+            <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="<?= $roles['id'] ?>" value="<?= $roles['id'] ?>" name="<?= $roles['id'] ?>" target="_blank"><?= $roles['nombre'] ?>
+                  </label>
+            </div>
+            <?php }
+            } ?>
+                <!-- <div class="form-check">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" id="<?= $roles['id'] ?>" target="_blank"><?= $roles['nombre'] ?>
-                    </label>
+                      <input class="form-check-input" type="checkbox" id="1" name="1" value="1" target="_blank">Desarrollador                    </label>
               </div>
-          <?php }
-              } ?>
+                        <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="2" name="2" value="2" target="_blank">Analista                    </label>
+              </div>
+                        <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="3" name="3" value="3" target="_blank">Tester                    </label>
+              </div>
+                        <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="4" name="4" value="4" target="_blank">Diseñador                    </label>
+              </div>
+                        <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="5" name="5" value="5" target="_blank">Profesional PMO                    </label>
+              </div>
+                        <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="6" name="6" value="6" target="_blank">Profesional de servicios                    </label>
+              </div>
+                        <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="7" name="7" value="7" target="_blank">Auxiliar administrativo                    </label>
+              </div>
+                        <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="8" name="8" value="8" target="_blank">Codirector                    </label>
+              </div> -->
           <hr>
       </div>
       <div class="form-row">

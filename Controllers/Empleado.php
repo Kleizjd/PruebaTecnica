@@ -32,13 +32,14 @@ class Empleado extends Controllers{
 				$strArea = strClean($_POST['listArea']);
 				$strDescripcion = strClean($_POST['txtDescripcion']);
 				$strBoletin = isset($_POST['checkBoletin']);
-				$checkProfesional = strClean($_POST['checkProfesional']);
-				$checkGerente = strClean($_POST['checkGerente']);
-				$checkAuxiliar = strClean($_POST['checkAuxiliar']);
+				// $checkProfesional = strClean($_POST['checkProfesional']);
+				// $checkGerente = strClean($_POST['checkGerente']);
+				// $checkAuxiliar = strClean($_POST['checkAuxiliar']);
 
 				$request_user = "";
 				if($idUsuario == 0)	
 				{
+				
 					$option = 1;
 						$request_user = $this->model->insertEmpleado($strNombre, 
 																	$strEmail,

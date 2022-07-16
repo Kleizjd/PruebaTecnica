@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     let objData = JSON.parse(request.responseText);
                     if(objData.status)
                     {
+                            isChecked = (isChecked) ? 0 : 1;
                         if(rowTable == ""){
                             tableEmpleados.api().ajax.reload();
                         }else{
