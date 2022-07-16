@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 }
             }
             let intArea = document.querySelector('#listArea').value;
-            let strDescripcion = document.querySelector('#descripcion').value;
+            let strDescripcion = document.querySelector('#txtDescripcion').value;
             var isChecked = document.getElementById('checkBoletin').checked;
           
             // let checkProfesional = document.querySelector('#checkProfesional').value;

@@ -10,8 +10,8 @@
       </div>
       <div class="modal-body">
         <form id="formEmpleado" name="formEmpleado" class="form-horizontal">
-        <input type="hidden" id="idUsuario" name="idUsuario" value="">
-          
+          <input type="hidden" id="idUsuario" name="idUsuario" value="">
+
           <p class="text-primary">Los campos con asterisco (<span class="required">*</span>) son obligatorios.</p>
 
           <div class="form-row">
@@ -54,37 +54,27 @@
             <option value="6">Calidad</option>
           </select>
           <div class="form-group">
-                    <label for="descripcion">Descripcion</label>
-                    <textarea class="form-control" id="descripcion" name="descripcion" rows="3" placeholder="Descripcion de la experiencia del empleado"></textarea>
-                  </div>
+            <label for="txtDescripcion">Descripcion</label>
+            <textarea class="form-control" id="txtDescripcion" name="txtDescripcion" rows="3" placeholder="Descripcion de la experiencia del empleado"></textarea>
+          </div>
           <div class="form-check">
 
             <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" id="checkBoletin"  name="checkBoletin">Deseo recibir boletin Informativo
+              <input class="form-check-input" type="checkbox" id="checkBoletin" name="checkBoletin">Deseo recibir boletin Informativo
             </label>
           </div>
           <b>Roles</b>
-          <div class="roles-check">
-          <div class="form-check">
-            <!-- <label class="form-check-label">
-
-              <input class="form-check-input" type="checkbox" id="checkProfesional" name="checkProfesional" >Desarrollador
-            </label>
-
-          </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="checkbox" id="checkGerente" name="checkGerente">Gerente Estrategico
-              </label>
-
-            </div>
-          <div class="form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" id="checkAuxiliar" name="checkAuxiliar">Auxiliar Administrativo
-            </label>
-          </div> -->
-          </div>
-
+          <?php
+              if (count($data['roles']) > 0) {
+                  foreach ($data['roles'] as $roles) {
+                ?>
+              <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="<?= $roles['id'] ?>" target="_blank"><?= $roles['nombre'] ?>
+                    </label>
+              </div>
+          <?php }
+              } ?>
           <hr>
       </div>
       <div class="form-row">
@@ -100,61 +90,3 @@
 </div>
 </div>
 
-<!-- Modal -->
-<!-- <div class="modal fade" id="modalViewEmpleado" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header header-primary">
-        <h5 class="modal-title" id="titleModal">Datos del cliente</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table class="table table-bordered">
-          <tbody>
-            <tr>
-              <td>Identificación:</td>
-              <td id="celIdentificacion">654654654</td>
-            </tr>
-            <tr>
-              <td>Nombres:</td>
-              <td id="celNombre">Jacob</td>
-            </tr>
-            <tr>
-              <td>Apellidos:</td>
-              <td id="celApellido">Jacob</td>
-            </tr>
-            <tr>
-              <td>Teléfono:</td>
-              <td id="celTelefono">Larry</td>
-            </tr>
-            <tr>
-              <td>Email (Usuario):</td>
-              <td id="celEmail">Larry</td>
-            </tr>
-            <tr>
-              <td>Identificación Tributaria:</td>
-              <td id="celIde">Larry</td>
-            </tr>
-            <tr>
-              <td>Nombre Fiscal:</td>
-              <td id="celNomFiscal">Larry</td>
-            </tr>
-            <tr>
-              <td>Dirección Fiscal:</td>
-              <td id="celDirFiscal">Larry</td>
-            </tr>
-            <tr>
-              <td>Fecha registro:</td>
-              <td id="celFechaRegistro">Larry</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div> -->

@@ -12,7 +12,8 @@ class Empleado extends Controllers{
 		$data['page_title'] = "Empleado <small>test</small>";
 		$data['page_name'] = "Empleado";
 		$data['page_functions_js'] = "functions_empleado.js";
-		$data['roles'] = $this->model->selectEmpleados();
+		// $data['roles'] = $this->model->selectEmpleados();
+		$data['roles'] = $this->model->selectRoles();
 		$this->views->getView($this,"empleado",$data);
 	}
 
@@ -39,13 +40,11 @@ class Empleado extends Controllers{
 				if($idUsuario == 0)	
 				{
 					$option = 1;
-					//  dep($_POST);
-					// exit();
 						$request_user = $this->model->insertEmpleado($strNombre, 
 																	$strEmail,
 																	$charSexo,
-																	$strArea, $strDescripcion,
-																	$strBoletin
+																	$strArea, 
+																	$strBoletin,$strDescripcion,
 																	);
 																	// 
 																	// $checkProfesional,
@@ -59,8 +58,9 @@ class Empleado extends Controllers{
 																	$strEmail,
 																	$charSexo,
 																	$strArea, 
+																	$strBoletin, 
 																	$strDescripcion,
-																	$strBoletin);
+																	);
 																	// $checkProfesional,
 																	// $checkGerente,$checkAuxiliar);
 					

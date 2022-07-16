@@ -1,10 +1,9 @@
 <?php 
 	const BASE_URL = "http://localhost/www/PruebaTecnica";
-	// const BASE_URL = "http://localhost/www/tienda_virtual";
-	//const BASE_URL = "https://abelosh.com/tiendavirtual";
+
 
 	//Zona horaria
-	date_default_timezone_set('America/Guatemala');
+	date_default_timezone_set('America/Bogota');
 
 	//Datos de conexión a Base de Datos
 	const DB_HOST = "localhost";
@@ -36,7 +35,7 @@
 	//const SECRET = "";
 
 	//Datos envio de correo
-	const NOMBRE_REMITENTE = "Tienda Virtual";
+	const NOMBRE_REMITENTE = "PRUEBA TECNICA";
 	// const EMAIL_REMITENTE = "no-reply@abelosh.com";
 	const EMAIL_REMITENTE = "jose.jdgo97@gmail.com";
 	const NOMBRE_EMPESA = "Tienda Virtual";
@@ -59,50 +58,9 @@
 	const CAT_FOOTER = "1,2,3,4,5";
 
 	//Datos para Encriptar / Desencriptar
-	const KEY = 'abelosh';
+	const KEY = 'JD';
 	const METHODENCRIPT = "AES-128-ECB";
 
-	//Envío
-	const COSTOENVIO = 5;
 
-	//Módulos
-	const MDASHBOARD = 1;
-	const MUSUARIOS = 2;
-	const MCLIENTES = 3;
-	const MPRODUCTOS = 4;
-	const MPEDIDOS = 5;
-	const MCATEGORIAS = 6;
-	const MSUSCRIPTORES = 7;
-	const MDCONTACTOS = 8;
-	const MDPAGINAS = 9;
-
-	//Páginas
-	const PINICIO = 1;
-	const PTIENDA = 2;
-	const PCARRITO = 3;
-	const PNOSOTROS = 4;
-	const PCONTACTO = 5;
-	const PPREGUNTAS = 6;
-	const PTERMINOS = 7;
-	const PSUCURSALES = 8;
-	const PERROR = 9;
-
-	//Roles
-	const RADMINISTRADOR = 1;
-	const RSUPERVISOR = 2;
-	const RCLIENTES = 3;
-
-	const STATUS = array('Completo','Aprobado','Cancelado','Reembolsado','Pendiente','Entregado');
-
-	//Productos por página
-	const CANTPORDHOME = 8;
-	const PROPORPAGINA = 4;
-	const PROCATEGORIA = 4;
-	const PROBUSCAR = 4;
-
-	//REDES SOCIALES
-	const FACEBOOK = "https://www.facebook.com/abelosh";
-	const INSTAGRAM = "https://www.instagram.com/febel24/";
-	
 
  ?>
