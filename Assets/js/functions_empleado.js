@@ -70,7 +70,11 @@ document.addEventListener('DOMContentLoaded', function(){
             let intArea = document.querySelector('#listArea').value;
             let strDescripcion = document.querySelector('#txtDescripcion').value;
             var isChecked = document.getElementById('checkBoletin').checked;
-          
+            if (isChecked.checked) {
+                isChecked = 1;
+            }else{
+                isChecked = 0;
+            }
             // let checkProfesional = document.querySelector('#checkProfesional').value;
             // let checkGerente = document.querySelector('#checkGerente').value;
             // let checkAuxiliar = document.querySelector('#checkAuxiliar').value;
@@ -101,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     let objData = JSON.parse(request.responseText);
                     if(objData.status)
                     {
-                            isChecked = (isChecked) ? 0 : 1;
+                            // isChecked = (isChecked) ? 0 : 1;
                         if(rowTable == ""){
                             tableEmpleados.api().ajax.reload();
                         }else{

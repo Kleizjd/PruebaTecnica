@@ -32,9 +32,17 @@ class Empleado extends Controllers{
 				$strArea = strClean($_POST['listArea']);
 				$strDescripcion = strClean($_POST['txtDescripcion']);
 				$strBoletin = isset($_POST['checkBoletin']);
-				// $checkProfesional = strClean($_POST['checkProfesional']);
-				// $checkGerente = strClean($_POST['checkGerente']);
-				// $checkAuxiliar = strClean($_POST['checkAuxiliar']);
+				// $arrayRol = array(strClean($_POST['1']), strClean($_POST['2']), strClean($_POST['3']),  strClean($_POST['4']), strClean($_POST['5']), strClean($_POST['6']), strClean($_POST['7']),strClean($_POST['8']));
+				// foreach($arrayRol as $rol_id){
+
+				// 	$sqlid = "SELECT `AUTO_INCREMENT` FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'prueba_tecnica_dev' AND TABLE_NAME = 'empleado';";
+				// 	$autoIncrementId = $this->select($sqlid);
+					
+				// 	$query_insert  = "INSERT INTO empleado_rol(empleado_id,rol_id) VALUES(?,?)";
+				// 	$arrData = array($autoIncrementId, $arrayRol[0]);
+				// 	$arrData = array($autoIncrementId, $rol_id);
+				// }
+				// var_dump($arrayRol);
 
 				$request_user = "";
 				if($idUsuario == 0)	

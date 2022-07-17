@@ -10,17 +10,15 @@ class EmpleadoModel extends Mysql
 	private $strArea;
 	private $strDescripcion;
 	private $intBoletin;
-	private $checkProfesional;
-	private $checkGerente;
-	private $checkAuxiliar;
+	private $intArrayRol;
+
 
 	public function __construct()
 	{
 		parent::__construct();
 	}	
 
-	public function insertEmpleado(string $nombre, string $email, string $sexo, int $area, string $boletin,string $descripcion ){
-	// public function insertEmpleado(string $nombre, string $email, string $sexo, int $area, string $descripcion, string $boletin, string $profesional, string $gerente, string $auxiliar){
+	public function insertEmpleado(string $nombre, string $email, string $sexo, int $area, string $boletin,string $descripcion ){//$arrayRol
 		
 		$this->strNombre = $nombre;
 		$this->strEmail = $email;
@@ -28,9 +26,17 @@ class EmpleadoModel extends Mysql
 		$this->strArea = $area;
 		$this->strDescripcion= $descripcion;
 		$this->intBoletin= $boletin;
-		// $this->checkProfesional = $profesional;
-		// $this->checkGerente = $gerente;
-		// $this->checkAuxiliar = $auxiliar;
+		// $this->intArrayRol = $arrayRol;
+	
+		// foreach($arrayRol as $rol_id ){
+
+		// 	$sqlid = "SELECT `AUTO_INCREMENT` FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'prueba_tecnica_dev' AND TABLE_NAME = 'empleado';";
+		// 	$autoIncrementId = $this->select($sqlid);
+			
+		// 	$query_insert  = "INSERT INTO empleado_rol(empleado_id,rol_id) VALUES(?,?)";
+		// 	$arrData = array($autoIncrementId, $rol_id);
+		// }
+		// $request_in = $this->insert($query_insert,$arrData);
 
 		// $return = 0;
 		// $sql = "SELECT * FROM empleado WHERE email = '{$this->strEmail}'";
@@ -59,7 +65,7 @@ class EmpleadoModel extends Mysql
 
 
 
-	public function updateEmpleado(int $idUsuario, string $nombre, string $email, string $sexo, int $area,  string  $boletin, string $descripcion){
+	public function updateEmpleado(int $idUsuario, string $nombre, string $email, string $sexo, int $area,  string  $boletin, string $descripcion){//$arrayRol
 
 		$this->intIdUsuario = $idUsuario;
 		$this->strNombre = $nombre;
@@ -68,6 +74,7 @@ class EmpleadoModel extends Mysql
 		$this->strArea = $area;
 		$this->strBoletin = $boletin;
 		$this->strDescripcion= $descripcion;
+		// $this->intArrayRol = $arrayRol;
 			
 				$sql = "UPDATE empleado SET id=?, nombre=?, email=?, sexo=?, area_id=?, boletin=? ,descripcion= ?
 				WHERE id = $this->intIdUsuario  ";
@@ -78,8 +85,7 @@ class EmpleadoModel extends Mysql
 								$this->strArea,
 								$this->strBoletin,
 								$this->strDescripcion);
-								// $this->intBoletin,
-								// $this->strRol);
+								
 		
 			$request = $this->update($sql,$arrData);
 
